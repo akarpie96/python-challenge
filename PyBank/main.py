@@ -28,7 +28,10 @@ def average(total_profit):
     for number in total_profit: 
         total += float(number)
     return total/length
-    
-print(round(sum(total_profit)))
-print(len(total_months))
-print(average(total_profit))
+
+ 
+print("Financial Analysis")  
+print("-----------------------") 
+print(f"Total Months: {len(total_months)}")
+print(f"Total: ${round(sum(total_profit))}")
+print(f"Average Change : ${round((int(total_profit[85])-int(total_profit[0]))/((85)))}")
