@@ -64,9 +64,6 @@ print(f"Greatest Decrease in profits: (${min(difference)})")
 
 output_file = os.path.join("analysis.txt")
 
-with open(output_file, "w", newline='') as datafile: 
+with open(output_file, "w", newline='') as text: 
 
-    writer=csv.writer(datafile)
-
-    writer.writerow(str("Financial Analysis"))
-    writer.writerow(f"Total Months: {len(total_months)}")
+    text.write("Financial Analysis")
