@@ -66,4 +66,9 @@ output_file = os.path.join("analysis.txt")
 
 with open(output_file, "w", newline='') as text: 
 
-    text.write("Financial Analysis")
+    text.write("Financial Analysis\n")
+    text.write("-----------------------\n")
+    text.write(f"Total Months: {len(total_months)}\n")
+    text.write(f"Average Change : ${round((int(total_profit[85])-int(total_profit[0]))/((85)),2)}\n")
+    text.write(f"Greatest Increase in profits: (${max(difference)})\n")
+    text.write(f"Greatest Decrease in profits: (${min(difference)})")
