@@ -40,9 +40,33 @@ def average(total_profit):
     for number in total_profit: 
         total += float(number)
     return total/length
-print(difference)
+
+def max(total_profit): 
+    Max = 0 
+    for number in difference:
+        if number>Max: 
+            Max = number 
+    return Max 
+
+def min(difference):
+    Min = 0 
+    for number in difference: 
+        if number<Min: 
+            Min = number
+    return Min
 print("Financial Analysis")  
 print("-----------------------") 
 print(f"Total Months: {len(total_months)}")
 print(f"Total: ${round(sum(total_profit))}")
 print(f"Average Change : ${round((int(total_profit[85])-int(total_profit[0]))/((85)),2)}")
+print(f"Greatest Increase in profits: (${max(difference)})")
+print(f"Greatest Decrease in profits: (${min(difference)})")
+
+output_file = os.path.join("analysis.txt")
+
+with open(output_file, "w", newline='') as datafile: 
+
+    writer=csv.writer(datafile)
+
+    writer.writerow(str("Financial Analysis"))
+    writer.writerow(f"Total Months: {len(total_months)}")
