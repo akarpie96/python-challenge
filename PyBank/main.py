@@ -1,7 +1,7 @@
 import os 
 import csv
 
-pybank_csv=os.path.join("..","PyBank", "Resources", "budget_data.csv")
+pybank_csv=os.path.join("..", "PyBank", "budget_data.csv")
 
 total_months=[]
 total_profit = []
