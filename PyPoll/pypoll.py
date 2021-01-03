@@ -12,7 +12,7 @@ csvfilepath=os.path.join("..", "..", "PyPoll", "Resources", "election_data.csv" 
 with open(csvfilepath, "r") as csvfile: 
     csvreader=csv.reader(csvfile, delimiter=',')
     csvheader=next(csvreader)
-    print(csvheader)
+    
 
     for row in csvreader: 
         total_vote.append(row[2])
@@ -34,18 +34,25 @@ with open(csvfilepath, "r") as csvfile:
 
 
 totalvotecount=len(total_vote)
+
+#Determining winner 
+if khanvote> totalvotecount-khanvote:
+        winner= "Khan"
+elif Correyvote > totalvotecount - Correyvote:
+        winner= "Correy"
+elif Livote > totalvotecount - Livote: 
+        winner = "Li"
+elif Otooleyvote > totalvotecount - Otooleyvote: 
+        winner = "O'tooley"
+
+#Calculating percentage of votes for each candidate 
 khanpercentage= khanvote/totalvotecount 
 correypercentage= Correyvote/totalvotecount
 Lipercentage= Livote/totalvotecount
 Otooleypercentage= Otooleyvote/totalvotecount
-#Total Votes cast 
-print(totalvotecount)
 
-# Total Votes cast for each candidate 
-print(khanvote)
-print(Correyvote)
-print(Livote)
-print(Otooleyvote)
+
+
 # Percentage of total votes cast for each candidate/applying formatting to variables for simplicity
 Khan_percent=("{:.3%}".format(khanpercentage))
 Correy_percent=("{:.3%}".format(correypercentage))
@@ -62,3 +69,24 @@ print(f"Khan: {Khan_percent} ({khanvote})")
 print(f"Correy: {Correy_percent} ({Correyvote})")
 print(f"Li: {Li_percent} ({Livote})")
 print(f"O'Tooley: {Otooley_percent} ({Otooleyvote})")
+print(f"Winner: {winner}")
+
+
+#Writing out final Result to text file 
+output_file = os.path.join("Analysis", "PollAnalysis.txt")
+
+with open(output_file, "w", newline='') as text: 
+
+    text.write("Election Results\n")
+    text.write("-----------------------\n")
+    text.write(f"Total Votes: {totalvotecount}\n")
+    text.write("-----------------------\n")
+    text.write(f"Khan: {Khan_percent} ({khanvote})\n")
+    text.write(f"Correy: {Correy_percent} ({Correyvote})\n")
+    text.write(f"Li: {Li_percent} ({Livote})\n")
+    text.write(f"O'Tooley: {Otooley_percent} ({Otooleyvote})\n")
+    text.write("-----------------------\n")
+    text.write(f"Winner: {winner}\n")
+    text.write("-----------------------\n")
+    
+   
