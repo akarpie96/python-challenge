@@ -7,7 +7,7 @@ khanvote= 0
 Correyvote= 0 
 Livote= 0 
 Otooleyvote= 0
-csvfilepath=os.path.join("..", "..", "PyPoll", "Resources", "election_data.csv" )
+csvfilepath=os.path.join("..", ".." , "PyPoll", "Resources", "election_data.csv")
 
 with open(csvfilepath, "r") as csvfile: 
     csvreader=csv.reader(csvfile, delimiter=',')
@@ -87,6 +87,6 @@ with open(output_file, "w", newline='') as text:
     text.write(f"O'Tooley: {Otooley_percent} ({Otooleyvote})\n")
     text.write("-----------------------\n")
     text.write(f"Winner: {winner}\n")
-    text.write("-----------------------\n")
+    text.write("------------------------\n")
     
    

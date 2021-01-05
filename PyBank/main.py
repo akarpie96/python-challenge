@@ -1,13 +1,15 @@
 import os 
 import csv
 
-pybank_csv=os.path.join("..", "PyBank", "budget_data.csv")
+
+pybank_csv=os.path.join("c:/Users/Aaron Karpie/DataClass/uci-irv-data-pt-12-2020-u-c/Homework/03-Python/Instructions/python-challenge/PyBank/budget_data.csv")
 
 total_months=[]
 total_profit = []
 
 difference = []
 i=0 
+found=False
 
 with open (pybank_csv, 'r') as csvfile :
     csvreader=csv.reader(csvfile) 
@@ -16,6 +18,8 @@ with open (pybank_csv, 'r') as csvfile :
     for row in csvreader:
         total_months.append(row[0])
         total_profit.append(row[1])
+    
+    
 
 
 while i<85: 
@@ -25,10 +29,8 @@ while i<85:
 
     i = i + 1
          
-
-
 def sum(total_profit): 
-    length = len(total_profit)
+    
     total = 0.0
     for number in total_profit: 
         total += float(number)
@@ -54,6 +56,21 @@ def min(difference):
         if number<Min: 
             Min = number
     return Min
+
+#Locate index of difference row with max change in profit
+def length_max(difference):
+    x = 1
+    for number in difference: 
+        if number!=max(difference): 
+            x=x+1
+        else:
+            return x
+
+print(length_max(difference))
+print(total_months[25])
+
+
+
 print("Financial Analysis")  
 print("-----------------------") 
 print(f"Total Months: {len(total_months)}")
