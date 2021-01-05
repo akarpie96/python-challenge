@@ -57,17 +57,32 @@ def min(difference):
             Min = number
     return Min
 
-#Locate index of difference row with max change in profit
+#Locate index within difference list containing max change in profit
 def length_max(difference):
-    x = 1
+    x = 0
     for number in difference: 
         if number!=max(difference): 
             x=x+1
         else:
             return x
 
-print(length_max(difference))
-print(total_months[25])
+
+
+#Use index found above to find corresponding date. Difference list is one less, so the corresponding index will be one more. 
+max_month=(total_months[(length_max(difference))+1])
+
+
+#Locate index within difference list containing min change in profit
+def length_min(difference):
+    x = 0
+    for number in difference: 
+        if number!=min(difference): 
+            x=x+1
+        else:
+            return x
+#Use index found above to find corresponding date. Difference list is one less, so the corresponding index will be one more.
+min_month=(total_months[length_min(difference)+1])
+
 
 
 
@@ -76,16 +91,17 @@ print("-----------------------")
 print(f"Total Months: {len(total_months)}")
 print(f"Total: ${round(sum(total_profit))}")
 print(f"Average Change : ${round((int(total_profit[85])-int(total_profit[0]))/((85)),2)}")
-print(f"Greatest Increase in profits: (${max(difference)})")
-print(f"Greatest Decrease in profits: (${min(difference)})")
+print(f"Greatest Increase in profits:{max_month} (${max(difference)})")
+print(f"Greatest Decrease in profits: {min_month} (${min(difference)})")
 
 output_file = os.path.join("analysis.txt")
 
 with open(output_file, "w", newline='') as text: 
 
+   
     text.write("Financial Analysis\n")
     text.write("-----------------------\n")
     text.write(f"Total Months: {len(total_months)}\n")
     text.write(f"Average Change : ${round((int(total_profit[85])-int(total_profit[0]))/((85)),2)}\n")
-    text.write(f"Greatest Increase in profits: (${max(difference)})\n")
-    text.write(f"Greatest Decrease in profits: (${min(difference)})")
+    text.write(f"Greatest Increase in profits: {max_month}(${max(difference)})\n")
+    text.write(f"Greatest Decrease in profits: {min_month} (${min(difference)})")
