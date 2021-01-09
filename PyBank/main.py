@@ -97,8 +97,6 @@ print(f"Greatest Decrease in profits: {min_month} (${min(difference)})")
 output_file = os.path.join("analysis.txt")
 
 with open(output_file, "w", newline='') as text: 
-
-   
     text.write("Financial Analysis\n")
     text.write("-----------------------\n")
     text.write(f"Total Months: {len(total_months)}\n")
