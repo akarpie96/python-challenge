@@ -41,8 +41,7 @@
 
   * The winner of the election based on popular vote.
 
-* As an example, your analysis should look similar to the one below:
-
+*Final Output to both terminal and text file.
   ```text
   Election Results
   -------------------------
@@ -57,4 +56,6 @@
   -------------------------
   ```
 
-* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+## Scripts: 
+[PyBank](/PyBank/main.py)
+[PyPoll](/PyPoll/pypoll.py)
