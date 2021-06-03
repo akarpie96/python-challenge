@@ -1,6 +1,6 @@
 # PyBank
 ## PyBank Background
-* Created a Python script for analyzing the financial records of fictional company using [Budget Data](/akarpie96/python-challenge/blob/main/Resources%20-%20PyBank/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`.
+* Created a Python script for analyzing the financial records of fictional company using [Budget Data](/Resources%20-%20PyBank/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`.
 
 * The python script calculates the following:
 
