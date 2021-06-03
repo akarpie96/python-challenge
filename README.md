@@ -8,7 +8,7 @@
 
   * The net total amount of "Profit/Losses" over the entire period
 
-  * Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
+  * The changes in "Profit/Losses" over the entire period, and the average of those changes. 
 
   * The greatest increase in profits (date and amount) over the entire period
 
@@ -29,7 +29,7 @@
 ## PyPoll
 
 
-* Created a Python script to auotmate vote counting process using (Resources PyPoll/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. 
+* Created a Python script to auotmate vote counting process using [Election Data](/Resources%20PyPoll/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. 
 
   * The total number of votes cast
 
