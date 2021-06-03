@@ -1,6 +1,6 @@
 # PyBank
 ## PyBank Background
-* Created a Python script for analyzing the financial records of fictional company using [budget_data.csv](/Resources-PyBank/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`.
+* Created a Python script for analyzing the financial records of fictional company using [Budget Data](Resources-PyBank/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`.
 
 * The python script calculates the following:
 
@@ -29,7 +29,7 @@
 ## PyPoll
 
 
-* Created a Python script to auotmate vote counting process using (Resources PyPoll/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. Your task is to create a Python script that analyzes the votes and calculates each of the following:
+* Created a Python script to auotmate vote counting process using (Resources PyPoll/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. 
 
   * The total number of votes cast
 
